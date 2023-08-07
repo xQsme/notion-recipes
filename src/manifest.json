@@ -4,26 +4,17 @@
 	"version": "1.0",
 	"description": "Parses recipes from BBC Good Food and creates a page for them in Notion.",
 	"icons": {
-		"48": "notion.png"
+		"48": "icons/notion.png"
 	},
 	"browser_action": {
 		"default_icon": {
-			"48": "notion.png"
-		}
+			"48": "icons/notion.png"
+		},
+		"default_title": "Save Recipe!"
 	},
-	"content_scripts": [
-		{
-			"matches": [
-				"*://*.bbcgoodfood.com/*"
-			],
-			"js": [
-				"dist/index.js"
-			]
-		}
-	],
 	"background": {
 		"scripts": [
-			"dist/background.js"
+			"background.ts"
 		]
 	},
 	"permissions": [
